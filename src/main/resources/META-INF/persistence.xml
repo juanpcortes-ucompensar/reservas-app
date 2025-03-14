@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+                                 http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+
+    <!-- Definimos la unidad de persistencia -->
+    <persistence-unit name="reservasAppPU" transaction-type="RESOURCE_LOCAL">
+        
+        <!-- Proveedor de JPA (usando EclipseLink) -->
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+        <!-- Clases de entidad -->
+        <class>com.miproyecto.model.Reserva</class>
+        <class>com.miproyecto.model.Usuario</class>
+
+        <properties>
+            <!-- Configuración de la conexión a la base de datos -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/reservasdb?serverTimezone=UTC" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="" />
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+
+            <!-- Configuración de EclipseLink -->
+            <property name="eclipselink.logging.level" value="INFO"/>
+            <property name="javax.persistence.schema-generation.database.action" value="create" />
+        </properties>
+    </persistence-unit>
+</persistence>
