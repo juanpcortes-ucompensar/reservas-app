@@ -7,7 +7,7 @@
 ## Pasos para el despliegue
 1. **Clonar el repositorio**:
     ```bash
-    git clone https://github.com/usuario/reservas-app.git
+    git clone https://github.com/juanpcortes-ucompensar/reservas-app.git
     ```
 2. **Importar el proyecto** en su IDE preferido (Eclipse, IntelliJ, etc.).
 3. **Compilar el proyecto** utilizando Maven:
